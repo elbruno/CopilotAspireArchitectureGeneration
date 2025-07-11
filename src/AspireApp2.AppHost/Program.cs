@@ -1,32 +1,3 @@
-// // let's document this!
-
-// var builder = DistributedApplication.CreateBuilder(args);
-
-// var apiService = builder.AddProject<Projects.AspireApp2_ApiService>("apiservice");
-
-// builder.AddProject<Projects.AspireApp2_Web>("webfrontend")
-//     .WithExternalHttpEndpoints()
-//     .WithReference(apiService)
-//     .WaitFor(apiService);
-
-// builder.Build().Run();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 var builder = DistributedApplication.CreateBuilder(args);
 
 var sql = builder.AddSqlServer("sql")
