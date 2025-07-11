@@ -6,9 +6,10 @@
 2. **Analyze the entire solution** (all projects, code, and configuration files in the `src` folder) to understand the overall goal and architecture.
 3. **Analyze the AspireApp2.AppHost project** to generate an architecture diagram representing the solution's structure and service relationships.
    - **Before generating the architecture diagram, ask the user to choose the preferred format:**
-     - Mermaid chart (image, generated using the `mcp-mermaid` server)
      - ASCII diagram (text-based, see example below)
-   - Generate the diagram in the format selected by the user and include it in the documentation.
+     - Mermaid chart (image, generated using the `mcp-mermaid` server)
+     - Both (generate and include both diagram types)
+   - Generate the diagram(s) in the format(s) selected by the user and include them in the documentation.
 4. **Create a detailed Markdown file. The file name must end with the current date and time in the following format: `SolutionOverview-yyyyMMdd-hhmmss.md`**
    - Where:
      - `yyyy` is the 4-digit year
