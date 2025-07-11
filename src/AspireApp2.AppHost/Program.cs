@@ -1,6 +1,5 @@
 var builder = DistributedApplication.CreateBuilder(args);
 
-var cache = builder.AddRedis("cache");
 var sql = builder.AddSqlServer("sql")
     .WithLifetime(ContainerLifetime.Persistent)
     .WithImageTag("2025-latest")
@@ -9,6 +8,8 @@ var sql = builder.AddSqlServer("sql")
 var productsDb = sql
     .WithDataVolume()
     .AddDatabase("productsDb");
+
+var cache = builder.AddRedis("cache");
 
 var apiService = builder.AddProject<Projects.AspireApp2_ApiService>("apiservice")
     .WithReference(productsDb)
