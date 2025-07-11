@@ -5,10 +5,31 @@
 
 2. **Analyze the entire solution** (all projects, code, and configuration files in the `src` folder) to understand the overall goal and architecture.
 3. **Analyze the AspireApp2.AppHost project** to generate an architecture diagram representing the solution's structure and service relationships.
-4. **Create a detailed Markdown file (`SolutionOverview.md`) that:**
+4. **Create a detailed Markdown file. The file name must end with the current date and time, for example: `SolutionOverview-20250711-123022.md`**
    - Explains the goal and purpose of the solution.
    - Describes the architecture, main components, and their interactions.
-   - **Includes the generated architecture diagram as a separate section in the documentation file.**
+   - **Includes the generated architecture diagram as a separate section in the documentation file. The architecture diagram must be in ASCII format, for example:**
+
+```
++-------------------+
+|   AspireApp2      |
+|    .AppHost       |
++-------------------+
+         |
+         | orchestrates
+         v
++-------------------+      ++-------------------+
+| AspireApp2.Web    |<---->| AspireApp2.ApiSvc |
+| (Blazor Frontend) |      | (Weather API)     |
++-------------------+      ++-------------------+
+         |                        ^
+         | uses                   |
+         v                        |
++-------------------+             |
+|   Redis Cache     |<-------------+
++-------------------+
+```
+
    - Provides as much detail as possible about the solution’s design, features, and intended use.
    - **The generated documentation must be saved in a `docs` folder at the root of the repository. If the `docs` folder does not exist, it must be created.**
 5. **(Optional, only if user confirms)**: Use Playwright MCP server tools to:
