@@ -57,7 +57,7 @@ The solution is composed of several projects and services, orchestrated by the A
 
 ## Architecture Diagram (Mermaid)
 
-![Architecture Diagram](SolutionOverview-20250711-000000.svg)
+![Architecture Diagram](SolutionOverview-complete-mermaid.svg)
 
 ## Main Components
 
